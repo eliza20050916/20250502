@@ -44,17 +44,17 @@ function draw() {
   );
 
   // 顯示攝影機影像
-  push(); // 儲存當前繪圖狀態
-  translate(width / 2, height / 2); // 將原點移動到畫布中央
-  scale(-1, 1); // 水平翻轉影像
-  image(
-    capture,
-    -capture.width / 2, // 調整影像位置以保持居中
-    -capture.height / 2,
-    capture.width,
-    capture.height
-  ); // 顯示翻轉後的影像
-  pop(); // 恢復繪圖狀態
+  // push(); // 儲存當前繪圖狀態
+  // translate(width / 2, height / 2); // 將原點移動到畫布中央
+  // scale(-1, 1); // 水平翻轉影像
+  // image(
+  //   capture,
+  //   -capture.width / 2, // 調整影像位置以保持居中
+  //   -capture.height / 2,
+  //   capture.width,
+  //   capture.height
+  // ); // 顯示翻轉後的影像
+  // pop(); // 恢復繪圖狀態
 }
 
 function windowResized() {
