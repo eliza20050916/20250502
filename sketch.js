@@ -28,9 +28,13 @@ function draw() {
     for (let y = 0; y < graphics.height; y += 20) {
       // 從 capture 中取得相對應位置的顏色
       let col = capture.get(x, y);
-      graphics.fill(col); // 設定圓的顏色
+      graphics.fill(col); // 設定方框的顏色
       graphics.noStroke();
-      graphics.ellipse(x + 10, y + 10, 15, 15); // 繪製圓，中心點偏移 10 以對齊單位格
+      graphics.rect(x + 1, y + 1, 18, 18); // 繪製方框，留 1px 間距
+
+      // 繪製中間的黑色圓
+      graphics.fill(0); // 設定圓的顏色為黑色
+      graphics.ellipse(x + 10, y + 10, 5, 5); // 繪製圓，中心點偏移 10 以對齊單位格
     }
   }
 
@@ -42,19 +46,6 @@ function draw() {
     graphics.width,
     graphics.height
   );
-
-  // 顯示攝影機影像
-  // push(); // 儲存當前繪圖狀態
-  // translate(width / 2, height / 2); // 將原點移動到畫布中央
-  // scale(-1, 1); // 水平翻轉影像
-  // image(
-  //   capture,
-  //   -capture.width / 2, // 調整影像位置以保持居中
-  //   -capture.height / 2,
-  //   capture.width,
-  //   capture.height
-  // ); // 顯示翻轉後的影像
-  // pop(); // 恢復繪圖狀態
 }
 
 function windowResized() {
