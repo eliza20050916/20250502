@@ -32,9 +32,9 @@ function draw() {
       graphics.noStroke();
       graphics.rect(x + 1, y + 1, 18, 18); // 繪製方框，留 1px 間距
 
-      // 繪製中間的黑色圓
-      graphics.fill(0); // 設定圓的顏色為黑色
-      graphics.ellipse(x + 10, y + 10, 5, 5); // 繪製圓，中心點偏移 10 以對齊單位格
+      // 繪製中間的黑色方框
+      graphics.fill(0); // 設定中間方框的顏色為黑色
+      graphics.rect(x + 7, y + 7, 6, 6); // 繪製小方框，中心點偏移以對齊單位格
     }
   }
 
