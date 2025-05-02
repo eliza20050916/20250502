@@ -28,7 +28,8 @@ function draw() {
     for (let y = 0; y < graphics.height; y += 20) {
       // 從 capture 中取得相對應位置的顏色
       let col = capture.get(x, y);
-      graphics.fill(col); // 設定方框的顏色
+      let gray = (red(col) + green(col) + blue(col)) / 3; // 計算黑白色
+      graphics.fill(gray); // 設定方框的顏色為黑白
       graphics.noStroke();
       graphics.rect(x + 1, y + 1, 18, 18); // 繪製方框，留 1px 間距
 
